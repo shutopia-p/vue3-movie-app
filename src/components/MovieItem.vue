@@ -1,5 +1,9 @@
 <template>
-  <div>{{ movie.imdbID }}</div>
+  <div class="movie">
+    <img
+      :src="movie.Poster"
+      alt="" />
+  </div>
 </template>
 
 <script>
