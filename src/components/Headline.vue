@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <h1>
-    <span>OMDb API</span><br />
-    THE OPEN<br /> 
-    MOVIE DATABASE
+      <span>OMDb API</span><br />
+      THE OPEN<br /> 
+      MOVIE DATABASE
     </h1>
     <p>
       The OMDb API is a RESTful web service to obtain movie information, all content and images on the site are contributed and maintained by our users.<br />
@@ -13,8 +13,6 @@
 </template>
 
 <style lang="scss" scoped>
-@import "~/scss/main";
-
 .container {
   padding-top: 40px;
 }

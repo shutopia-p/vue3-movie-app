@@ -5,30 +5,30 @@
       class="form-control"
       type="text" 
       placeholder="Search for Movies, Series & more"
-      @keyup.enter="apply"/>
-      <div class="selects">
-        <select
-          v-for="filter in filters"
-          v-model="$data[filter.name]"
-          :key="filter.name"
-          class="form-select">
-          <option
-            v-if="filter.name === 'year'"
-            value="">
-            All Years
-          </option>
-          <option
-            v-for="item in filter.items"
-            :key="item">
-            {{ item }}
-          </option>
-        </select>
-      </div>
-      <button 
-        class="btn btn-primary" 
-        @click="apply">
-        Apple
-      </button>
+      @keyup.enter="apply" />
+    <div class="selects">
+      <select
+        v-for="filter in filters"
+        v-model="$data[filter.name]"
+        :key="filter.name"
+        class="form-select">
+        <option
+          v-if="filter.name === 'year'"
+          value="">
+          All Years
+        </option>
+        <option
+          v-for="item in filter.items"
+          :key="item">
+          {{ item }}
+        </option>
+      </select>
+    </div>
+    <button 
+      class="btn btn-primary" 
+      @click="apply">
+      Apple
+    </button>
   </div>
 </template>
 
@@ -101,6 +101,24 @@ export default {
     height: 50px;
     font-weight: 700;
     flex-shrink: 0;
+  }
+
+  @include media-breakpoint-down(lg) {
+    display: block;
+    input {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    .selects {
+      margin-right: 0;
+      margin-bottom: 10px;
+      select {
+        width: 100%;
+      }
+    }
+    .btn {
+      width: 100%;
+    }
   }
 }
 </style>
